@@ -24,3 +24,7 @@ cse:
           prefix: rest           # 匹配请求路径前缀为/rest
           withVersion: true      # 请求带版本号，例如v1表示[1.0.0,2.0.0)范围内的微服务版本
           prefixSegmentCount: 3  # 前缀长度，例如/rest/provider/v0/hello/Bob，去掉前三段，将/hello/Bob转发到后端
+
+  accesslog:
+    enabled: true
+    pattern: "%h cs-method cs-uri %s %B %SCB-traceId"
