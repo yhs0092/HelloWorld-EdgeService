@@ -31,3 +31,7 @@ cse:
   accesslog:
     enabled: true
     pattern: "%h cs-method cs-uri %s %B %SCB-traceId"
+
+#  loadbalance:  # 加入这段配置，取消实例隔离功能，以便观察服务熔断功能
+#    isolation:
+#      enabled: false
